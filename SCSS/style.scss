@@ -1,11 +1,10 @@
-  // scss variables! 
-  $primary-color: #0e6cff;
-  $secondary-color: #ff8700;
-  $fonts: Arial, Helvetica, Serif;
+// SCSS variables
+$primary-color: #0e6cff;
+$secondary-color: #ff8700;
+$fonts: Arial, Helvetica, Serif;
 
-  // basic page styling. Some of it needs compiling!
-
-  * {
+// Basic page styling
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,6 +14,43 @@ body {
   background-color: $primary-color;
   font-family: $fonts;
   line-height: 1.5;
+  color: #333;
 }
 
+// Header styling
+header {
+  background-color: $secondary-color;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+// Navigation bar styling
+nav {
+  background-color: darken($primary-color, 10%);
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  li {
+    margin: 0 15px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Footer styling
+footer {
+  background-color: lighten($primary-color, 20%);
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
  
