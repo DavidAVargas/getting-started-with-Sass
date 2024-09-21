@@ -1,6 +1,7 @@
 // SCSS variables
 $primary-color: #0e6cff;
 $secondary-color: #ff8700;
+$accent-color: #ffcc00;
 $fonts: Arial, Helvetica, Serif;
 
 // Basic page styling
@@ -11,46 +12,81 @@ $fonts: Arial, Helvetica, Serif;
 }
 
 body {
-  background-color: $primary-color;
+  background-color: #f4f4f4;
   font-family: $fonts;
   line-height: 1.5;
   color: #333;
 }
 
 // Header styling
-header {
-  background-color: $secondary-color;
-  padding: 20px;
-  text-align: center;
+.hero {
+  background: linear-gradient(to right, $primary-color, $secondary-color);
   color: #fff;
-}
-
-// Navigation bar styling
-nav {
-  background-color: darken($primary-color, 10%);
-  ul {
-    list-style: none;
-    padding: 0;
+  padding: 40px 0;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  nav {
     display: flex;
-    justify-content: center;
-  }
-  li {
-    margin: 0 15px;
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        margin: 0 15px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
-}
-
-// Footer styling
-footer {
-  background-color: lighten($primary-color, 20%);
-  padding: 10px;
-  text-align: center;
-  color: #fff;
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    div {
+      max-width: 600px;
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      .btn-primary, .btn-secondary {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      .btn-primary {
+        background-color: $accent-color;
+      }
+      .btn-secondary {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+    img {
+      max-width: 400px;
+      border-radius: 10px;
+    }
+  }
 }
  
